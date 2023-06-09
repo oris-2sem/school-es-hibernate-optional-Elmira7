@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">qwerty</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <property name="connection.pool_size">2</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="ru.itis.model.Task" />
+        <mapping class="ru.itis.model.Student" />
+        <mapping class="ru.itis.model.Teacher" />
+        <mapping class="ru.itis.model.Timetable" />
+        <mapping class="ru.itis.model.Parent" />
+        <mapping class="ru.itis.model.Group" />
+        <mapping class="ru.itis.model.Lesson" />
+
+
+    </session-factory>
+</hibernate-configuration>
